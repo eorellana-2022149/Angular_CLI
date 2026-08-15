@@ -1,59 +1,27 @@
-# PrimerProyectoAngular
+### Componentes que genere
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.
+Bueno aquí esta el como trabaje esto. El proyecto lo cree con el Angular CLI, osea con el comando `ng new` y ya de ahi el CLI te crea todo solito, todas las carpetas y archivos que se necesitan para que funcione.
 
-## Development server
+### Componentes que generé
 
-To start a local development server, run:
+Genere varios componentes usando `ng generate component`, en total son 7 (el CLI hace todo el trabajo, vos solo pones el nombre y el ya te crea el html, el scss, el ts y hasta el archivo de test):
 
-```bash
-ng serve
-```
+- **Header**: aqui puse mis datos personales, nombre, carne y carrera.
+- **Navbar**: un menu de navegacion con unos links de prueba.
+- **Body**: es como el contenido principal de la pagina.
+- **List**: una lista con unos elementos de ejemplo.
+- **Form**: un formulario sencillo con inputs de nombre, edad y correo.
+- **Button**: un componente aparte solo para el boton, para reutilizarlo despues.
+- **Footer**: el pie de pagina con links de redes sociales (facebook, whatsapp, instagram).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Todos estos los meti dentro de una carpeta que se llama `components/` para tenerlos ordenados y no que anden regados por todo el proyecto, y ya despues Angular los registra automatico en el `app.module.ts` cuando los generas con el CLI entonces no hay que hacer nada mas ahi, el solito se encarga.
 
-## Code scaffolding
+### Como esta organizado esto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Ademas de los componentes deje preparadas 3 carpetas para cuando ya se necesite conectar con el backend (el que va a estar en TypeScript/Node.js):
 
-```bash
-ng generate component component-name
-```
+- `core/`
+- `features/`
+- `shared/`
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Por ahorita estan vacias (bueno tienen un archivo de prueba nomas para que no se borren en el git jeje) pero la idea es que despues ahi vaya la logica de servicios, cosas compartidas entre componentes y las features/modulos grandes del proyecto conforme vaya creciendo.
